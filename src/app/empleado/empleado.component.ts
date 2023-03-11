@@ -15,6 +15,18 @@ import { Component } from '@angular/core';
   //
   //
 })
-export class EmpleadoComponent {
+export class EmpleadoComponent{
+
+  nombre = "Daniel";
+  apellido ="Marquez";
+  private edadIngreso =28;
+  edad = 32;
+  empresa="Empresa gatuna";
+
+
+  //metodo para acceder a la propiedad privada
+  getEdadIngreso(){
+    return this.edadIngreso;
+  }
 
 }
