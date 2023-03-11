@@ -1,8 +1,19 @@
 <p>Nombre del empleado: {{nombre}}</p>
 <p>Apellido el emplreado: {{apellido}}</p>
-<!-- Hay que llamar el metodo no la propiedad -->
+<!-- Hay que llamar al metodo, no la propiedad -->
 <p>Edad al ingresar: {{getEdadIngreso()}}</p>
 <p>Edad del empleado: {{edad<18?"Es menor de edad":"Es mayor de edad"}}</p>
-<p>Empresa: {{empresa}}</p>
+<p>Empresa: {{empresa.value}}</p>
 
-<h3>Bienvenido {{nombre}} {{apellido}}</h3>
+<h3>Bienvenido/a {{nombre}} {{apellido}}</h3>
+
+Introduce la empresa: <input #empresa type="text">
+<br>
+<br>
+<input type="button" value="Ingresar" (click)="ingresoEmpresa(empresa.value)">
+<br>
+<br>
+<h2>Texto de cajita: {{prueba.value}}</h2>
+Cajita de prueba: <input #prueba type="text" (keyup)="0">
+<br>
+<br>
