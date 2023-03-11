@@ -23,14 +23,29 @@ export class EmpleadoComponent{
   edad = 32;
   // empresa="Empresa gatuna";
   //metodo para acceder a la propiedad privada
+  textoRegistro = "No hay nadie registrado";
+  registro = false;
+  habilitarCaja = true;
+
   getEdadIngreso(){
     return this.edadIngreso;
   }
 
-  habilitarCaja = true;
+  getRegistroUsuario(){
+    this.registro=false;
+  }
+
+  setUsuarioRegistrado(event:Event){
+    // alert("Hipoteticamente te has registrado");
+    // this.textoRegistro="El usuario se acaba de registrar";
+    if((<HTMLInputElement>event.target).value =="si"){
+      this.textoRegistro="El usuario se acaba de registrar";
+    }else{
+      this.textoRegistro="No hay usuario registrado";
+    }
+  }
 
   ingresoEmpresa(value:String){
-
   }
 
 }

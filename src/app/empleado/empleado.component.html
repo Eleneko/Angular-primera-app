@@ -17,3 +17,9 @@ Introduce la empresa: <input #empresa type="text">
 Cajita de prueba: <input #prueba type="text" (keyup)="0" [disabled]="habilitarCaja">
 <br>
 <br>
+{{textoRegistro}}
+<br>
+<br>
+Usuario registrado<input type="radio" name="nRegistro" value="si" id="registro" [checked]="registro" (click)="setUsuarioRegistrado($event)"><br>
+Usuario no registrado<input type="radio" name="nRegistro" value="no" (click)="setUsuarioRegistrado($event)"><br>
+{{getRegistroUsuario()}}
