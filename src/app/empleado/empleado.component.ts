@@ -27,8 +27,10 @@ export class EmpleadoComponent{
     return this.edadIngreso;
   }
 
+  habilitarCaja = true;
+
   ingresoEmpresa(value:String){
-    
+
   }
 
 }
