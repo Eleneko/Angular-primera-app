@@ -21,12 +21,17 @@ export class EmpleadoComponent{
   apellido ="Marquez";
   private edadIngreso =21;
   edad = 32;
-  // empresa="Empresa gatuna";
-  //metodo para acceder a la propiedad privada
+
+  empresa="Google";
+  // cambiarEmpresa(event:Event){
+  //   this.empresa=(<HTMLInputElement>event.target).value;
+  // }
+
   textoRegistro = "No hay nadie registrado";
   registro = false;
-  habilitarCaja = true;
+  habilitarCaja = false;
 
+  //metodo para acceder a la propiedad privada
   getEdadIngreso(){
     return this.edadIngreso;
   }

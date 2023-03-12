@@ -2,21 +2,27 @@
 <p>Apellido el emplreado: {{apellido}}</p>
 <!-- Hay que llamar al metodo, no la propiedad -->
 <p>Edad al ingresar: {{getEdadIngreso()}}</p>
+<!-- Un ternario -->
 <p>Edad del empleado: {{edad<18?"Es menor de edad":"Es mayor de edad"}}</p>
-<p>Empresa: {{empresa.value}}</p>
+<p>Empresa: {{empresa}}</p>
 
 <h3>Bienvenido/a {{nombre}} {{apellido}}</h3>
 
-Introduce la empresa: <input #empresa type="text">
+<!-- Binding bidireccional, banana in box [()] para usar ngModel debo importarlo en app.module.ts-->
+Introduce la empresa: <input type="text" [(ngModel)]="empresa">
+
 <br>
 <br>
-<input type="button" value="Ingresar" (click)="ingresoEmpresa(empresa.value)">
 <br>
 <br>
+<hr>
+
 <h2>Texto de cajita: {{prueba.value}}</h2>
 Cajita de prueba: <input #prueba type="text" (keyup)="0" [disabled]="habilitarCaja">
+
 <br>
 <br>
+<hr>
 {{textoRegistro}}
 <br>
 <br>
